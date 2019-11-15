@@ -14,7 +14,9 @@ void wtvm() //Creates the "Write to Video Memory" function.
 	for (c1 != 7; c1 < 8; c1++) //For loop, executes 7 times.
 	{
 		*wtvm = wltx[c1]; //Writes "Welcome" to video memory.
-		wtvm++; //Increments "wtvm" by 1.
+		wtvm++; //Increments
+		wtvm++; //wtvm
+		wtvm++; //by three.
 	}
 }
 
