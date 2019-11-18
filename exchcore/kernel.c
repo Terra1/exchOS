@@ -14,7 +14,7 @@ void wtvm() //Creates the "Write to Video Memory" function.
 	while ( wltx[pos] != '\0' )
 	{
 		*wtvm = wltx[pos]; //Writes "Welcome" to video memory.
-		wtvm += 3;
+		wtvm += 4;
 		pos++;
 	}
 }
