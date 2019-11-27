@@ -19,7 +19,7 @@ void wtvm() //Creates the "Write to Video Memory" function.
 	}
 }
 
-kernel_main()
+int start_main()
 {
 	wtvm(); //Executes the function "wtvm" (located at line 11).
 }
