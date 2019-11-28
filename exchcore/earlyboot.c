@@ -9,7 +9,7 @@ pos: Counter
 char wltx[8] = { 'W', 'e', 'l', 'c', 'o', 'm', 'e', '\0' }; //Array containing the word "welcome" in individual characters, terminated by null.
 void wtvm() //Creates the "Write to Video Memory" function.
 {
-	char *wtvm = (char*)0xB8000; //Creates a pointer to the start of VGA video memory named "wtvm".
+	volatile char *wtvm = (volatile char*)0xB8000; //Creates a pointer to the start of VGA video memory named "wtvm".
 	int pos = 0;
 	while ( wltx[pos] != '\0' )
 	{
@@ -19,7 +19,13 @@ void wtvm() //Creates the "Write to Video Memory" function.
 	}
 }
 
+void gdt() //Creates the function used for the Global Descriptor Table
+}
+	asm()
+{
+
 int start_main()
 {
-	wtvm(); //Executes the function "wtvm" (located at line 11).
+	wtvm(); //Executes the function "wtvm" (located at line 10).
+	gdt(); //Executes the function "gdt" (located at line 22).
 }
