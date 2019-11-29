@@ -9,7 +9,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-string welc_text;
+const char* welc_text;
 welc_text = "Welcome";
 
 static void gdt() // Creates the function used for the Global Descriptor Table
