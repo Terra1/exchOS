@@ -3,6 +3,7 @@
  vidmem: Video Memory
  wel_text: Welcome Text
  pos: Counter
+ gdtloc: Global Descriptor Table Location
 */
 
 #include <stdbool.h>
@@ -14,7 +15,8 @@ welc_text = "Welcome";
 
 static void gdt() // Creates the function used for the Global Descriptor Table
 {
-	asm()
+	uint32_t *gdtloc
+	asm("lgdt ")
 }
 
 int start_main()
