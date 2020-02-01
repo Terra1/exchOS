@@ -1,11 +1,3 @@
-/*
- FVA (Function/Variable/Array) Name List:
- vidmem: Video Memory
- welc_text: Welcome Text
- gdt: Global Descriptor Table
- gdtloc: Global Descriptor Table Location
-*/
-
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -16,7 +8,7 @@ static void gdt() // Creates the function used for the Global Descriptor Table
 	asm("lgdt %0")
 }
 
-int start_main()
+int main()
 {
 	const char* welc_text = "Welcome";
 	volatile char *vidmem = (volatile char*)0xB8000; // Creates a pointer to the start of VGA video memory named "vidmem".
